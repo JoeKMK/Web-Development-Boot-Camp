@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Syntax</title>
+    </head>
+
+    <body>
+        <p>
+            Selector {
+            Property: Value;
+            }
+        </p>
+
+        <p>
+            Selector {
+            Property: Value;
+            Property: Value;
+            }
+        </p>
+
+        <p>
+            One page one id only
+            One page can have multiple classes of the same name
+        </p>
+        <p> Inside overrides outside
+            Class and ids override tags
+            Inline > Internal > External
+            Inline overrides internal and external stylesheets.
+        </p>
+        <p>Class Selectors start with .</p>
+        <p>Id Selectors start with #</p>
+        <p>Pseudo-classes start with a colon (:)</p>
+        <p>Multiple selectors can be separated by commas (,)</p>
+        <p>Multiple properties can be separated by semicolons (;)</p>
+        <p>Multiple values can be separated by commas (,)</p>
+        <p>Comments are written between /* and */</p>
+        <p>Browsers have default css</p>
+
+        <p>Use the !important property to override other styles</p>
+        <pre>
+            What is !important?
+    
+    The !important rule in CSS is used to add more importance to a property/value than normal.
+    
+    In fact, if you use the !important rule, it will override ALL previous styling rules for that specific property on that element!
+    Tip: It is good to know about the !important rule. You might see it in some CSS source code. However, do not use it unless you absolutely have to.
+    Let us look at an example:
+         </pre>
+
+
+        <!--
+            #myid {
+  background-color: blue;
+}
+
+.myclass {
+  background-color: gray;
+}
+
+p {
+  background-color: red !important;
+}
+-->
+
+        <!-- 
+        use "classes" to style a group of related items and "id" to style a single item.
+        IDs can only be used once on a page, classes can be used multiple times.
+        classes are preceded by a dot (.) and IDs are preceded by a hash (#).
+        Pseudo-classes are used to define a special state of an element.
+    -->
+
+
+
+    </body>
+
+</html>
