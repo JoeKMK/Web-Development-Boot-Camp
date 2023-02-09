@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Learning Emmet</title>
+        <style>
+            body {
+                background-image: url("https://images.pexels.com/photos/66869/green-leaf-natural-wallpaper-royalty-free-66869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                color: white;
+                font-size: 2rem;
+                text-align: center;
+                padding-top: 5rem;
+            }
+    </style>
+    </head>
+
+    <body>
+        <h1> The use of Emmet !</h1>
+        <hr>
+        <p>
+            Emmet is a plugin for many popular text editors which greatly improves HTML & CSS workflow.
+            It is available for Sublime Text, Atom, Brackets, Visual Studio Code, WebStorm, PhpStorm, NetBeans, Eclipse,
+            Dreamweaver, IntelliJ IDEA, and VIM.
+            It is also available as a web application and as a standalone application for Windows, Mac OS X and Linux.
+            Programming languages supported by Emmet include HTML, XML, XSL, and CSS, handlebars and PHP.
+            Emmet also supports the creation of custom snippets for other languages.
+
+        </p>
+        <p> Emmet Shortcuts (HTML) </p>
+        <div>
+            <ol>
+                <li>
+                    <p> <b> ! </b> - Generates a new HTML5 doctype. </p>
+                </li>
+
+                <li>
+                    <p>
+                        <b> Child ">" </b> - Generates a child element nested between parent tags. eg. nav>ul>li
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> Sibling "+" </b> - Generates a sibling element nested between parent tags. eg. nav+ul+li
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> Climb-up "^" </b> - Generates a climb-up element nested between parent tags. eg. nav>ul>li^p
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> Multiplication "*" </b> - Generates a multiplication element nested between parent tags. eg.
+                        ul>li*5
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> Grouping "()" </b> - Generates a grouping element nested between parent tags. eg. (ul>li)*5
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> Item Numbering "$" </b> - Generates a item numbering element nested between parent tags. eg.
+                        ul>li.item$*5
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> ID and Class "#" and "." </b> - Generates a ID and Class element nested between parent tags.
+                        eg. ul#list>li.item$*5
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> Text "[]" </b> - Generates a text element nested between parent tags. eg.
+                        ul#list>li.item$*5[Item $]
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> Custom Attribute "{}" </b> - Generates a custom attribute element nested between parent
+                        tags. eg. a{Click me}
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> Custom Attribute with Text "{text}" </b> - Generates a custom attribute with text element
+                        nested between parent tags. eg. a{Click me}
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> meta:utf</b> - Generates a meta element with utf-8 charset. eg. meta:utf
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> link:css</b> - Generates a link element with css stylesheet. eg. link:css
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> link:css+js</b> - Generates a link element with css and js stylesheet. eg. link:css+js
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> link:css+js+rel</b> - Generates a link element with css, js and rel stylesheet. eg.
+                        link:css+js+rel
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> w </b> - width
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> h </b> - height
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> d </b> - display
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> pos </b> - position
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> t </b> - top
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> r </b> - right
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> b </b> - bottom
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> l </b> - left
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> z </b> - z-index
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bg </b> - background
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bgc </b> - background-color
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bgi </b> - background-image
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bgr </b> - background-repeat
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bga </b> - background-attachment
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bgh </b> - background-height
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bgp </b> - background-position
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bgsz </b> - background-size
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bgo </b> - background-origin
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bgl </b> - background-clip
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bga </b> - background-attachment
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> ff </b> - font-family
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> fz </b> - font-size
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> fw </b> - font-weight
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> lh </b> - line-height
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> m </b> - margin
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> mt </b> - margin-top
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> mr </b> - margin-right
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> mb </b> - margin-bottom
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> ml </b> - margin-left
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> p </b> - padding
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> pt </b> - padding-top
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> pr </b> - padding-right
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> pb </b> - padding-bottom
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> pl </b> - padding-left
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bd </b> - border
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdt </b> - border-top
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdr </b> - border-right
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdb </b> - border-bottom
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdl </b> - border-left
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdc </b> - border-color
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bds </b> - border-style
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdw </b> - border-width
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdr </b> - border-radius
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdtl </b> - border-top-left-radius
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdtr </b> - border-top-right-radius
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdbl </b> - border-bottom-left-radius
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdbr </b> - border-bottom-right-radius
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdbx </b> - border-box
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdbxsh </b> - box-shadow
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdbxsho </b> - box-shadow-offset
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdbxshb </b> - box-shadow-blur
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdbxshs </b> - box-shadow-spread
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdbxshc </b> - box-shadow-color
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdbxshin </b> - box-shadow-inset
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdbxshout </b> - box-shadow-outset
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdbxshnone </b> - box-shadow-none
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdbxshreset </b> - box-shadow-reset
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdbxshall </b> - box-shadow-all
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdbxshnone </b> - box-shadow-none
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdbxshreset </b> - box-shadow-reset
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bdbxshall </b> - box-shadow-all
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> ff:ss </b> - font-family: sans-serif
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> ff:m </b> - font-family: monospace
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> ff:c </b> - font-family: cursive
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> ff:f </b> - font-family: fantasy
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> ff:s </b> - font-family: serif
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> ff:sys </b> - font-family: system-ui
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> ff:ui </b> - font-family: ui-serif
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>va</b> - vertical-align
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>va:sub</b> - vertical-align: sub
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>va:sup</b> - vertical-align: super
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>va:top</b> - vertical-align: top
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>va:text-top</b> - vertical-align: text-top
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>va:middle</b> - vertical-align: middle
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>va:bottom</b> - vertical-align: bottom
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>va:text-bottom</b> - vertical-align: text-bottom
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>va:baseline</b> - vertical-align: baseline
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>va:initial</b> - vertical-align: initial
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>va:inherit</b> - vertical-align: inherit
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>va:unset</b> - vertical-align: unset
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>va:reset</b> - vertical-align: reset
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>va:revert</b> - vertical-align: revert
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bg</b> - background
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bgc</b> - background-color
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> bgc:tr</b> - background-color: transparent
+                    </p>
+                </li>
+
+            </ol>
+        </div>
+
+
+    </body>
+
+</html>
