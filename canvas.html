@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>canvas</title>
+    </head>
+
+    <body>
+        <h1>HTML Graphics</h1>
+        <p>
+            What is HTML Canvas?<br>
+            The HTML canvas element is used to draw graphics, on the fly, via JavaScript.
+            The canvas element is only a container for graphics. You must use JavaScript to actually draw the graphics.
+            Canvas has several methods for drawing paths, boxes, circles, text, and adding images. A canvas is a
+            rectangular area on an HTML page. By default, a canvas has no border and no content. Note: Always specify an
+            id attribute (to be referred to in a script), and a width and height attribute to define the size of the
+            canvas. To add a border, use the style attribute.
+        </p>
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+        </canvas>
+
+        <!--javascript below-->
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.moveTo(0, 0);
+            ctx.lineTo(200, 100);
+            ctx.stroke();
+        </script>
+        <hr>
+        <p>After creating the rectangular canvas area, you must add a JavaScript to do the drawing.</p>
+
+        <canvas id="myCanvas2" width="200" height="100" style="border:1px solid #000000;">
+        </canvas>
+        <script>
+            var c = document.getElementById("myCanvas2");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+            ctx.stroke();
+        </script>
+        <hr>
+
+        <canvas id="myCanvas3" width="200" height="100" style="border:1px solid #000000;">
+        </canvas>
+        <script>
+            var c = document.getElementById("myCanvas3");
+            var ctx = c.getContext("2d");
+            ctx.font = "30px Arial";
+            ctx.fillText("Hello World", 10, 50);
+        </script>
+        <hr>
+        <p>Draw Linear Gradient</p>
+        <canvas id="myCanvas4" width="200" height="100" style="border:1px solid #000000;">
+        </canvas>
+        <script>
+            var c = document.getElementById("myCanvas4");
+            var ctx = c.getContext("2d");
+
+            // Create gradient
+            var grd = ctx.createLinearGradient(0, 0, 200, 0);
+            grd.addColorStop(0, "red");
+            grd.addColorStop(1, "white");
+
+            // Fill with gradient
+            ctx.fillStyle = grd;
+            ctx.fillRect(10, 10, 150, 80);
+        </script>
+        <hr>
+        <p>Draw Radial Gradient</p>
+        <canvas id="myCanvas5" width="200" height="100" style="border:1px solid #000000;">
+        </canvas>
+        <script>
+            var c = document.getElementById("myCanvas5");
+            var ctx = c.getContext("2d");
+
+            // Create gradient
+            var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+            grd.addColorStop(0, "red");
+            grd.addColorStop(1, "white");
+
+            // Fill with gradient
+            ctx.fillStyle = grd;
+            ctx.fillRect(10, 10, 150, 80);
+        </script>
+        <hr>
+        <p>Draw Image</p>
+        <canvas id="myCanvas6" width="200" height="100" style="border:1px solid #000000;">
+        </canvas>
+        <script>
+            var c = document.getElementById("myCanvas6");
+            var ctx = c.getContext("2d");
+            var img = document.getElementById("monalisa");
+            ctx.drawImage(img, 10, 10);
+        </script>
+        <img id="monalisa" src="C:\Users\kyawm\source\HTML\SatelliteImages\monalisa.jpg" alt="The monalisa" width="220"
+            height="277">
+        <hr>
+        <h3> HTML SVG Graphics</h3>
+        <p>
+            SVG defines vector-based graphics in XML format.
+            What is SVG?
+            SVG stands for Scalable Vector Graphics
+            SVG is used to define graphics for the Web
+            SVG is a W3C recommendation. <br>
+            The HTML svg element is a container for SVG graphics.
+            SVG has several methods for drawing paths, boxes, circles, text, and graphic images. eg.SVG Circle
+        </p>
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+        </svg>
+        <hr>
+        <h3>HTML Multi-media</h3>
+        <p>
+            Multimedia on the web is sound, music, videos, movies, and animations. Multimedia Formats <br>
+            Multimedia elements (like audio or video) are stored in media files.
+            The most common way to discover the type of a file, is to look at the file extension.
+            Multimedia files have formats and different extensions like: .wav, .mp3, .mp4, .mpg, .wmv, and .avi.
+            <br>Common Video Formats<br> The MP4, WebM, and Ogg formats are supported by HTML. MP4. Developed by the
+            Moving Pictures Expert Group. Commonly used in video cameras and TV hardware. Supported by all browsers and
+            recommended by YouTube. <br> Note: MP3 and MP4 is best.
+        </p>
+        <h3> HTML Video element</h3>
+        <p>To show a video in HTML, use the video element:</p>
+        <video width="320" height="240" controls>
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+        <p>
+            How it Works <br>
+            The controls attribute adds video controls, like play, pause, and volume.
+            It is a good idea to always include width and height attributes. If height and width are not set, the page
+            might flicker while the video loads.</p>
+        <p> The "source" element allows you to specify alternative video files which the browser may choose from. The
+            browser will use the first recognized format.
+            The text between the "video" and "/video" tags will only be displayed in browsers that do not support the
+            "video" element. <br>To start a video automatically, use the "autoplay" attribute:
+        </p>
+        <!-- eg. code
+        <video width="320" height="240" autoplay>
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+      </video> 
+        -->
+        <p> Note: Chromium browsers do not allow autoplay in most cases. However, muted autoplay is always allowed. Add
+            muted after autoplay to let your video start playing automatically (but muted):</p>
+        <!-- eg.code 
+        <video width="320" height="240" autoplay muted>
+        <source src="https://www.youtube.com/watch?v=_Mz69752y_8" type="video/mp4">
+        <source src="https://www.youtube.com/watch?v=_Mz69752y_8" type="video/ogg">
+      Your browser does not support the video tag.
+      </video> 
+        -->
+        <pre>
+            HTML Video Tags
+    Tag 	Description
+    video 	Defines a video or movie
+    source 	Defines multiple media resources for media elements, such as video and audio
+    track 	Defines text tracks in media players
+        </pre>
+        <h3>HTML Audio element</h3>
+        <p>
+            The HTML audio element is used to embed sound content in documents. It may contain one or more audio
+            sources,
+            represented using the src attribute or the source element: the browser will choose the most suitable one. It
+            can also be the destination for streamed media, using a MediaStream.
+        </p>
+        <audio controls>
+            <source src="horse.ogg" type="audio/ogg">
+            <source src="horse.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <hr>
+        <h3> HTML Youtube Videos</h3>
+        <p>The easiest way to play videos in HTML, is to use YouTube. Converting videos to different formats can be
+            difficult and time-consuming. An easier solution is to let YouTube play the videos in your web page.</p>
+
+        <pre>Playing a YouTube Video in HTML
+To play your video on a web page, do the following:
+
+    Upload the video to YouTube
+    Take a note of the video id
+    Define an "iframe" element in your web page
+    Let the src attribute point to the video URL
+    Use the width and height attributes to specify the dimension of the player
+    Add any other parameters to the URL (see below). Example</pre>
+
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+        </iframe>
+        <hr>
+        <p>YouTube - Autoplay + Muted</p>
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+        </iframe>
+        <hr>
+        <p>
+            YouTube Loop<br>
+            Add loop=1 to let your video loop forever.
+            Value 0 (default): The video will play only once.
+            Value 1: The video will loop (forever).
+        </p>
+        <p>
+            YouTube Controls<br>
+            Add controls=0 to not display controls in the video player.
+            Value 0: Player controls does not display.
+            Value 1 (default): Player controls display.
+        </p>
+        <hr>
+        <h3> HTML Geolocation API</h3>
+        <p>
+            Locate the User's Position<br>
+            The HTML Geolocation API is used to get the geographical position of a user.
+            Since this can compromise privacy, the position is not available unless the user approves it. Note:
+            Geolocation is most accurate for devices with GPS, like smartphones.
+        </p>
+        <p>
+            Using HTML Geolocation<br>
+            The getCurrentPosition() method is used to return the user's position.
+            The example below returns the latitude and longitude of the user's position:
+        </p>
+        <script>
+            var x = document.getElementById("demo");
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+
+            function showPosition(position) {
+                x.innerHTML = "Latitude: " + position.coords.latitude +
+                    "<br>Longitude: " + position.coords.longitude;
+            }
+        </script>
+        <pre>Example explained:
+
+    Check if Geolocation is supported
+    If supported, run the getCurrentPosition() method. If not, display a message to the user
+    If the getCurrentPosition() method is successful, it returns a coordinates object to the function specified in the parameter (showPosition)
+    The showPosition() function outputs the Latitude and Longitude
+
+The example above is a very basic Geolocation script, with no error handling.</pre>
+        <button onclick="getLocation()">getLocation button</button>
+        <p id="demo"></p>
+        <hr>
+        <p>
+            Handling Errors and Rejections<br>
+            The second parameter of the getCurrentPosition() method is used to handle errors. It specifies a function to
+            run if it fails to get the user's location:
+        </p>
+        <pre>
+    function showError(error) {
+          switch(error.code) {
+            case error.PERMISSION_DENIED:
+              x.innerHTML = "User denied the request for Geolocation."
+              break;
+            case error.POSITION_UNAVAILABLE:
+              x.innerHTML = "Location information is unavailable."
+              break;
+            case error.TIMEOUT:
+              x.innerHTML = "The request to get user location timed out."
+              break;
+            case error.UNKNOWN_ERROR:
+              x.innerHTML = "An unknown error occurred."
+              break;
+          }
+        } </pre>
+
+    </body>
+
+</html>
