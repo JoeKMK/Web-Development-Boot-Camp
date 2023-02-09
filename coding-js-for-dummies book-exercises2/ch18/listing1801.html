@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Hello JQuery</title>
+<style>
+  #helloDiv {
+    background: #333;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 3px;
+    width: 200px;
+    height: 200px;
+    display: none;
+  }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+ 
+<button id="clickme">Click me!</button>
+
+<div id="helloDiv">Hello, JQuery!</div>
+
+
+ 
+<script>
+$( "#clickme" ).click(function () {
+  if ( $( "#helloDiv" ).is( ":hidden" ) ) {
+    $( "#helloDiv" ).slideDown( "slow" );
+  } else {
+    $( "div" ).hide();
+  }
+});
+</script>
+ 
+</body>
+</html>

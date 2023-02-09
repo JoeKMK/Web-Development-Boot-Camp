@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>Dynamic Introduction</title>
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+  <script>
+  // wait until everything is loaded
+  $(document).ready(function(){
+    // when the button is clicked
+    $('#loadIt').on('click',function(){
+      // get the value of the select and add .txt to it
+      var fileToLoad = $('#intros').val() + '.txt';
+      // open that file
+      $.ajax({url:fileToLoad,success:function(result){
+        // if successful with opening, display the file contents
+        $('#introtext').html(result);
+      }});
+    });
+  });
+
+  </script>
+</head>
+<body>
+  <h1>Select the type of introduction you would like:</h1>
+  <form id="intro-select">
+    <select id="intros">
+      <option value="none">Please Select</option>
+      <option value="formal">Formal</option>
+      <option value="friendly">Friendly</option>
+      <option value="piglatin">Piglatin</option>
+    </select>
+    <button id="loadIt" type="button">Load It!</button>
+  </form>
+  <div id="introtext"></div>
+</body>
+</html>
