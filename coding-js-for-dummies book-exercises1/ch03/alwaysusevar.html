@@ -1,0 +1,28 @@
+<html>
+  <head>
+  </head>
+  <body>
+  <script>
+
+  var movie = "The Godfather";
+
+  function showGoodMovie () {
+    alert (movie + " is a good movie!");
+  }
+
+  function showBadMovie () {	
+    movie = "Speed 2: Cruise Control";
+    alert (movie + " is a bad movie!");
+  }
+  // When we run the bad movie function, however, movie is not declared as a local variable, so it simply changes the global movie variable?
+
+  showGoodMovie (); // pops up "The Godfather is a good movie!"
+
+  showBadMovie (); // pops up "Speed 2: Cruise Control is a bad movie!"
+
+  // Oh no! The global variable is now Speed 2: Cruise Control, not the good movie name anymore?
+  showGoodMovie (); // pops up "Speed 2: Cruise Control is a good movie!"
+
+  </script>
+  </body>
+</html>

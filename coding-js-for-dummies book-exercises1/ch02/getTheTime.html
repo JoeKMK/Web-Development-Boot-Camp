@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Things to do</title>
+    <script>
+    /* 
+    The addThing function responds to clicks on the 
+    "I'll Make It Happen!" button, grabs the value from the 
+    text input, and adds the new thing to the list.
+    */
+    function addThing(){
+      /* 
+      Look for the HTML element with an id = "thingToDo" 
+      and get its current value.
+      */
+      var newThing = document.getElementById("thingToDo").value;
+      /* 
+      Find the element with an id="listOfThings" and change the value between its 
+      start and end tags by appending the value from the text input to it, followed 
+      by a <br>.
+      */
+      document.getElementById("listOfThings").innerHTML += newThing + "<br>";
+    }
+    </script>
+  </head>
+  <body>
+    <h1>Things to do when I get the time</h1>
+    <p id="listOfThings"></p>
+    <input type="text" id="thingToDo"><br>
+    <button id="add" onclick="addThing();">I'll Make It Happen!</button>
+  </body>
+</html>
